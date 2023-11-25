@@ -16,6 +16,7 @@ function App() {
         </header>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="HarvestLink/" element={<LandingPage />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/about" element={<></>} />
