@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HarvestLink/static/css/main.ac4da31c.css",
-    "main.js": "/HarvestLink/static/js/main.ae42664f.js",
+    "main.js": "/HarvestLink/static/js/main.bd4aacbd.js",
     "static/js/787.d5fa4d18.chunk.js": "/HarvestLink/static/js/787.d5fa4d18.chunk.js",
     "static/media/LandPage_bg.jpg": "/HarvestLink/static/media/LandPage_bg.3ce4ebf6177391cee82e.jpg",
     "static/media/HarvestLink Logo.png": "/HarvestLink/static/media/HarvestLink Logo.6a71806ae1c44eb79216.png",
@@ -9,11 +9,11 @@
     "static/media/facebook.png": "/HarvestLink/static/media/facebook.8d51a55626e9bf107f8f.png",
     "index.html": "/HarvestLink/index.html",
     "main.ac4da31c.css.map": "/HarvestLink/static/css/main.ac4da31c.css.map",
-    "main.ae42664f.js.map": "/HarvestLink/static/js/main.ae42664f.js.map",
+    "main.bd4aacbd.js.map": "/HarvestLink/static/js/main.bd4aacbd.js.map",
     "787.d5fa4d18.chunk.js.map": "/HarvestLink/static/js/787.d5fa4d18.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac4da31c.css",
-    "static/js/main.ae42664f.js"
+    "static/js/main.bd4aacbd.js"
   ]
 }
