@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import wheat from '../assets/images/LandPage_bg.jpg';
-import '../assets/styles/landing_page.css'
+
 
 function Landing_Page() {
   return (

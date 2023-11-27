@@ -16,3 +16,48 @@ body{
   transform: translateX(0);
 }  
 }
+
+@keyframes sideBar_open {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.sideBar_open {
+  animation: sideBar_open 1s ease-in-out;
+}
+
+
+@keyframes userBar_open {
+  0% {
+    opacity: 0;
+    transform: translateX(1600px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.userBar_open {
+  animation: userBar_open 1s ease-in-out;
+}
+
+
+.floating-box {
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translate(-10px, -10px) ;
+  }
+}
+
+.vr {
+  
+  
+}

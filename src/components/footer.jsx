@@ -1,5 +1,4 @@
 import React from "react";
-import '../assets/styles/footer.css'
 import facebook from "../assets/icons/facebook.png"
 import github from "../assets/icons/github-logo.png"
 import twitter from "../assets/icons/twitter.png"

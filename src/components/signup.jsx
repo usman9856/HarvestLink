@@ -47,7 +47,7 @@ function Signup() {
                   id="password"
                   name="CNIC"
                   type="number"
-                  inputmode="numeric"
+                  inputMode="numeric"
                   pattern="[0-9]*"
                   placeholder="XXXXXX-XXXXXX-X"
                   required
