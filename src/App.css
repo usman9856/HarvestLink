@@ -20,11 +20,11 @@ body{
 @keyframes sideBar_open {
   0% {
     opacity: 0;
-    transform: translateX(-500px);
+    transform: translateX(64px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(288px);
   }
 }
 .sideBar_open {
@@ -55,9 +55,4 @@ body{
   &:hover {
     transform: translate(-10px, -10px) ;
   }
-}
-
-.vr {
-  
-  
 }
