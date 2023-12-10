@@ -31,7 +31,7 @@ function Nav_Bar() {
     // Implement your sign-out logic here
   };
 
-  const loggedIn = false; // Set to true if the user is logged in
+  const loggedIn = true; // Set to true if the user is logged in
   const userInst = 'Farmer'; //type of user accessing the application
 
 

@@ -13,6 +13,10 @@ import FarmerCreate from './components/Farmer/FarmerCreate';
 import ManufactureCreate from './components/Manufacture/ManufactureCreate';
 import DriverCreate from './components/Driver/DriverCreate';
 import AdminCreate from './components/Admin/AdminCreate';
+import Invoice from './components/Invoice/Invoice';
+import InvoiceNew from './components/Invoice/InvoiceNew';
+import InvoiceReq from './components/Invoice/InvoiceRequest';
+import InvoiceView from './components/Invoice/InvoiceView';
 
 
 function App() {
@@ -47,6 +51,11 @@ function App() {
           <Route exact path="/ManufactureCreate" element={<ManufactureCreate/>} />
           <Route exact path="/DriverCreate" element={<DriverCreate/>} />
           <Route exact path="/AdminCreate" element={<AdminCreate/>} />
+          <Route exact path="/Trade" element={<Trade/>} />
+          <Route exact path="/Invoice" element={<Invoice/>} />
+          <Route exact path="/InvoiceNew" element={<InvoiceNew/>} />
+          <Route exact path="/InvoiceView" element={<InvoiceView/>} />
+          {/* <Route exact path="/InvoiceRequest" element={<InvoiceReq/>} /> */}
         </Routes>
         <footer>
           <Footer />
