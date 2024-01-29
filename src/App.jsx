@@ -15,8 +15,13 @@ import DriverCreate from './components/Driver/DriverCreate';
 import AdminCreate from './components/Admin/AdminCreate';
 import Invoice from './components/Invoice/Invoice';
 import InvoiceNew from './components/Invoice/InvoiceNew';
-import InvoiceReq from './components/Invoice/InvoiceRequest';
 import InvoiceView from './components/Invoice/InvoiceView';
+import InspectionLanding from './components/Inspection/InspectionLanding';
+import InspectionRequest from './components/Inspection/InspectionRequest';
+import DriverLanding from './components/Driver/DriverLanding';
+import DriverView from './components/Driver/DriverView';
+import RouteLanding from './components/Route/RouteLanding';
+import RouteCreate from './components/Driver/DriverCreate';
 
 
 function App() {
@@ -55,7 +60,12 @@ function App() {
           <Route exact path="/Invoice" element={<Invoice/>} />
           <Route exact path="/InvoiceNew" element={<InvoiceNew/>} />
           <Route exact path="/InvoiceView" element={<InvoiceView/>} />
-          {/* <Route exact path="/InvoiceRequest" element={<InvoiceReq/>} /> */}
+          <Route exact path="/InspectionLanding" element={<InspectionLanding/>} />
+          <Route exact path="/InspectionRequest" element={<InspectionRequest/>} />
+          <Route exact path="/DriverLanding" element={<DriverLanding/>} />
+          <Route exact path="/DriverView" element={<DriverView/>} />
+          <Route exact path="/RouteLanding" element={<RouteLanding/>} />
+          <Route exact path="/RouteCreate" element={<RouteCreate/>} />
         </Routes>
         <footer>
           <Footer />

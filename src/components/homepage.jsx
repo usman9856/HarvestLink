@@ -16,13 +16,13 @@ import taxIcon from '../assets/icons/tax.png';
 
 function Homepage() {
 
-  const user = 'Farmer'; //To be handled by backend developer; Tip fetch user type from backend
+  const user = 'Driver'; //To be handled by backend developer; Tip fetch user type from backend
 
   const homepageItems = [
-    { text: 'Inspection', link: '/Inspection', icon: inspectorIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
+    { text: 'Inspection', link: '/InspectionLanding', icon: inspectorIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Invoice', link: '/Invoice', icon: invoiceIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
-    { text: 'Driver', link: '/Driver', icon: driverIcon, access: ['Driver', 'Admin',] },
-    { text: 'Routes', link: '/Routes', icon: routeIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
+    { text: 'Driver', link: '/DriverLanding', icon: driverIcon, access: ['Driver', 'Admin',] },
+    { text: 'Routes', link: '/RouteLanding', icon: routeIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Farmer', link: '/FarmerLanding', icon: farmerIcon, access: ['Farmer', 'Admin',] },
     { text: 'Marketplace', link: '/Marketplace', icon: marketplaceIcon, access: ['Farmer', 'Manufacture', 'Admin',] },
     { text: 'Certificate', link: '/Certificate', icon: certificateIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },

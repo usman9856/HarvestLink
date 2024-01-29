@@ -32,7 +32,7 @@ function Nav_Bar() {
   };
 
   const loggedIn = true; // Set to true if the user is logged in
-  const userInst = 'Farmer'; //type of user accessing the application
+  const userInst = 'Driver'; //type of user accessing the application
 
 
 
@@ -43,10 +43,10 @@ function Nav_Bar() {
 
   //Defines Options and access to that specific options
   const sideBarItems = [
-    { text: 'Inspection', link: '/Inspection', icon: inspectorIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
+    { text: 'Inspection', link: '/InspectionLanding', icon: inspectorIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Invoice', link: '/Invoice', icon: invoiceIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Driver', link: '/Driver', icon: driverIcon, access: ['Driver', 'Admin',] },
-    { text: 'Routes', link: '/Routes', icon: routeIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
+    { text: 'Routes', link: '/RouteLanding', icon: routeIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Farmer', link: '/FarmerLanding', icon: farmerIcon, access: ['Farmer', 'Admin',] },
     { text: 'Marketplace', link: '/Marketplace', icon: marketplaceIcon, access: ['Farmer', 'Manufacture', 'Admin',] },
     { text: 'Certificate', link: '/Certificate', icon: certificateIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },

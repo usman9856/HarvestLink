@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Progress from "../Comp/Progress";
+import {Progress2} from "../Comp/Progress";
 export default function InvoiceNew() {
     const [currentStep, setCurrentStep] = useState(1);
 
@@ -12,13 +12,13 @@ export default function InvoiceNew() {
             {currentStep === 1 && (
                 <InvoiceInformation nextForm={nextForm} />
             )}
-            {currentStep === 2 && (
+            {/* {currentStep === 2 && (
                 <InvoiceDetail nextForm={nextForm} />
-            )}
-            {currentStep === 3 && (
+            )} */}
+            {currentStep === 2 && (
                 <ReciverInformation nextForm={nextForm} />
             )}
-            {currentStep === 4 && (
+            {currentStep === 3 && (
                 <SenderInformation nextForm={nextForm} />
             )}
         </div>
@@ -29,76 +29,7 @@ export default function InvoiceNew() {
 
 
 
-function InvoiceDetail({ nextForm }) {
-    const [descriptions, setDescriptions] = useState([]);
-    const [prices, setPrices] = useState([]);
 
-    const handleInputChange = (index, field, value) => {
-        if (field === 'description') {
-            const newDescriptions = [...descriptions];
-            newDescriptions[index] = value;
-            setDescriptions(newDescriptions);
-        } else if (field === 'price') {
-            const newPrices = [...prices];
-            newPrices[index] = value;
-            setPrices(newPrices);
-        }
-    };
-
-    return (
-        <div className="my-12 mx-10 bg-blue-800 rounded-3xl shadow-2xl p-4">
-            <div className="flex items-end justify-between h-[60px]">
-                <h2 className="text-3xl font-bold px-6 py-3 rounded-md">Create Invoice</h2>
-                <button
-                    className="bg-blue-600 text-white text-xl px-4 py-2 rounded-lg"
-                    onClick={nextForm}
-                >
-                    Next
-                </button>
-            </div> <hr className="my-4 h-1 bg-white" />
-            <Progress level={2} />
-            <form method="post" className="grid grid-cols-1 gap-4 mt-2">
-                <div className="p-4 flex flex-col space-y-4">
-                    <h2 className="mx-4 mt-2 text-3xl font-bold text-black">
-                        Input Invoice Detail
-                    </h2>
-                    <div className="flex felx-row items-center justify-around">
-                        <b>
-                            <h3 className="text-xl text-zinc-300">Description</h3>
-                        </b>
-                        <b>
-                            <h3 className="text-xl text-zinc-300">Price</h3>
-                        </b>
-                    </div>
-                    <div className="bg-blue-800 w-[1100px] ml-20">
-                        {[0, 1, 2, 3].map((index) => (
-                            <div key={index} className="flex felx-row items-center justify-center space-y-0">
-                                <input
-                                    className={`w-40 border-2 border-black ${index === 0 && 'rounded-tl-xl'} ${index === 3 && 'rounded-bl-xl'}`}
-                                    type="text"
-                                    value={descriptions[index] || ''}
-                                    onChange={(e) => handleInputChange(index, 'description', e.target.value)}
-                                />
-                                <input
-                                    className="w-[750px] border-2 border-black"
-                                    type="text"
-                                    value={prices[index] || ''}
-                                    onChange={(e) => handleInputChange(index, 'price', e.target.value)}
-                                />
-                                <input
-                                    className={`w-40 border-2 border-black ${index === 0 && 'rounded-tr-xl'} ${index === 3 && 'rounded-br-xl'}`}
-                                    type="number"
-                                    value={prices[index] || ''}
-                                    onChange={(e) => handleInputChange(index, 'price', e.target.value)}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </form>
-        </div>
-    );
-}
 
 function InvoiceInformation({ nextForm }) {
 
@@ -115,7 +46,7 @@ function InvoiceInformation({ nextForm }) {
 
             </div>
             <hr className="my-4 h-1 bg-white" />
-            <Progress level={1} />
+            <Progress2 level={1} />
             <form method="post" className="grid grid-cols-1 gap-4 mt-2">
                 <div className="p-4 grid grid-cols-1 gap-4">
                     <h2 className="mx-4 mt-2 text-3xl font-bold text-black">Invoice Information</h2>
@@ -138,6 +69,76 @@ function InvoiceInformation({ nextForm }) {
         </div>
     );
 }
+// function InvoiceDetail({ nextForm }) {
+//     const [descriptions, setDescriptions] = useState([]);
+//     const [prices, setPrices] = useState([]);
+
+//     const handleInputChange = (index, field, value) => {
+//         if (field === 'description') {
+//             const newDescriptions = [...descriptions];
+//             newDescriptions[index] = value;
+//             setDescriptions(newDescriptions);
+//         } else if (field === 'price') {
+//             const newPrices = [...prices];
+//             newPrices[index] = value;
+//             setPrices(newPrices);
+//         }
+//     };
+
+//     return (
+//         <div className="my-12 mx-10 bg-blue-800 rounded-3xl shadow-2xl p-4">
+//             <div className="flex items-end justify-between h-[60px]">
+//                 <h2 className="text-3xl font-bold px-6 py-3 rounded-md">Create Invoice</h2>
+//                 <button
+//                     className="bg-blue-600 text-white text-xl px-4 py-2 rounded-lg"
+//                     onClick={nextForm}
+//                 >
+//                     Next
+//                 </button>
+//             </div> <hr className="my-4 h-1 bg-white" />
+//             <Progress2 level={2} />
+//             <form method="post" className="grid grid-cols-1 gap-4 mt-2">
+//                 <div className="p-4 flex flex-col space-y-4">
+//                     <h2 className="mx-4 mt-2 text-3xl font-bold text-black">
+//                         Input Invoice Detail
+//                     </h2>
+//                     <div className="flex felx-row items-center justify-around">
+//                         <b>
+//                             <h3 className="text-xl text-zinc-300">Description</h3>
+//                         </b>
+//                         <b>
+//                             <h3 className="text-xl text-zinc-300">Price</h3>
+//                         </b>
+//                     </div>
+//                     <div className="bg-blue-800 w-[1100px] ml-20">
+//                         {[0, 1, 2, 3].map((index) => (
+//                             <div key={index} className="flex felx-row items-center justify-center space-y-0">
+//                                 <input
+//                                     className={`w-40 border-2 border-black ${index === 0 && 'rounded-tl-xl'} ${index === 3 && 'rounded-bl-xl'}`}
+//                                     type="text"
+//                                     value={descriptions[index] || ''}
+//                                     onChange={(e) => handleInputChange(index, 'description', e.target.value)}
+//                                 />
+//                                 <input
+//                                     className="w-[750px] border-2 border-black"
+//                                     type="text"
+//                                     value={prices[index] || ''}
+//                                     onChange={(e) => handleInputChange(index, 'price', e.target.value)}
+//                                 />
+//                                 <input
+//                                     className={`w-40 border-2 border-black ${index === 0 && 'rounded-tr-xl'} ${index === 3 && 'rounded-br-xl'}`}
+//                                     type="number"
+//                                     value={prices[index] || ''}
+//                                     onChange={(e) => handleInputChange(index, 'price', e.target.value)}
+//                                 />
+//                             </div>
+//                         ))}
+//                     </div>
+//                 </div>
+//             </form>
+//         </div>
+//     );
+// }
 
 function ReciverInformation({ nextForm }) {
     const [name, setName] = useState("");
@@ -168,7 +169,7 @@ function ReciverInformation({ nextForm }) {
                 <button className="bg-blue-600 text-white text-xl px-4 py-2 rounded-lg" onClick={nextForm}>Next</button>
             </div>
             <hr className="my-4 h-1 bg-white" />
-            <Progress level={3} />
+            <Progress2 level={2} />
             <form action="" className="grid grid-cols-1 gap-4 mt-2">
                 <div className="p-4 grid grid-cols-1 gap-4">
                     <h2 className="mx-4 mt-2 text-3xl font-bold text-black">Reciever Information</h2>
@@ -248,7 +249,7 @@ function SenderInformation({ }) {
                 <button className="bg-blue-600 text-white text-xl px-4 py-2 rounded-lg" onClick={submitForm}>Finish</button>
             </div>
             <hr className="my-4 h-1 bg-white" />
-            <Progress level={4} />
+            <Progress2 level={3} />
             <form method="post" className="grid grid-cols-1 gap-4 mt-2">
                 <div className="p-4 grid grid-cols-1 gap-4">
                     <h2 className="mx-4 mt-2 text-3xl font-bold text-black">Sender Information</h2>
