@@ -5,7 +5,7 @@ function Create() {
   
   const navigate = useNavigate();
   
-  const user = 'Farmer'; //To be handled by backend developer; Tip fetch user type from backend
+  const user = 'Admin'; //To be handled by backend developer; Tip fetch user type from backend
 
   const userType = [
     { text: 'Farmer', to: '/FarmerCreate' },

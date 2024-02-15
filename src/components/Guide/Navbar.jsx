@@ -32,7 +32,7 @@ function Nav_Bar() {
   };
 
   const loggedIn = true; // Set to true if the user is logged in
-  const userInst = 'Driver'; //type of user accessing the application
+  const userInst = 'Admin'; //type of user accessing the application
 
 
 

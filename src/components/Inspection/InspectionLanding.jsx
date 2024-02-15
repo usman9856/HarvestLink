@@ -171,7 +171,7 @@ export default function InspectionLanding() {
     return (
         <div className="mx-16 sm:mx-8 md:mx-16 mb-10 mt-6">
             <div className="flex flex-row items-center justify-between">
-                <b><h1 className="my-6 sm:text-2xl md:text-4xl ">Invoice</h1></b>
+                <b><h1 className="my-6 sm:text-2xl md:text-4xl ">Inspection</h1></b>
                 <Link to='/InspectionRequest'>
                     <button
                         className={`flex items-center justify-between  px-2.5 py-1 rounded-3xl bg-[#4663CC] text-white text-xl ${isHovered ? 'overflow-visible btn-expand-animate width' : 'overflow-hidden width btn-expand-animate'}`}
@@ -187,7 +187,7 @@ export default function InspectionLanding() {
             <div className="md:w-full sm:w-auto">
                 <div className="my-4 sm:my-0 border-2 border-white z-[-20]">
                     <DataTable
-                        title="Invoice Billings"
+                        title="Inspection"
                         columns={columns}
                         data={data}
                         className="rdt_Table"

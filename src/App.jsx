@@ -22,6 +22,16 @@ import DriverLanding from './components/Driver/DriverLanding';
 import DriverView from './components/Driver/DriverView';
 import RouteLanding from './components/Route/RouteLanding';
 import RouteCreate from './components/Driver/DriverCreate';
+import Manufacture_Landing from './components/Manufacture/ManufactureLanding';
+import CertificateLanding from './components/Certification/CertificationLanding';
+import CertificateDetail from './components/Certification/CertificateDetail';
+import AdminLanding from './components/Admin/AdminLanding';
+import EditRole from './components/Admin/EditRole';
+import ViewRole from './components/Admin/ViewRole';
+import DeleteRole from './components/Admin/DeleteRole';
+import AddRole from './components/Admin/AddRole';
+import AddFormComponent from './components/Admin/AddRole';
+import Appointment from './components/Admin/Appointements';
 
 
 function App() {
@@ -66,6 +76,14 @@ function App() {
           <Route exact path="/DriverView" element={<DriverView/>} />
           <Route exact path="/RouteLanding" element={<RouteLanding/>} />
           <Route exact path="/RouteCreate" element={<RouteCreate/>} />
+          <Route exact path="/ManufactureLanding" element={<Manufacture_Landing/>} />
+          <Route exact path="/CertificateLanding" element={<CertificateLanding/>} />
+          <Route exact path="/CertificateDetail" element={<CertificateDetail/>} />
+          <Route exact path="/AdminLanding" element={<AdminLanding/>} />
+          <Route exact path="/EditRole" element={<EditRole/>} />
+          <Route exact path="/ViewRole" element={<ViewRole/>} />
+          <Route exact path="/AddRole" element={<AddRole/>} />
+          <Route exact path="/Appointment" element={<Appointment/>} />
         </Routes>
         <footer>
           <Footer />

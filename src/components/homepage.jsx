@@ -16,7 +16,7 @@ import taxIcon from '../assets/icons/tax.png';
 
 function Homepage() {
 
-  const user = 'Driver'; //To be handled by backend developer; Tip fetch user type from backend
+  const user = 'Admin'; //To be handled by backend developer; Tip fetch user type from backend
 
   const homepageItems = [
     { text: 'Inspection', link: '/InspectionLanding', icon: inspectorIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
@@ -25,11 +25,11 @@ function Homepage() {
     { text: 'Routes', link: '/RouteLanding', icon: routeIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Farmer', link: '/FarmerLanding', icon: farmerIcon, access: ['Farmer', 'Admin',] },
     { text: 'Marketplace', link: '/Marketplace', icon: marketplaceIcon, access: ['Farmer', 'Manufacture', 'Admin',] },
-    { text: 'Certificate', link: '/Certificate', icon: certificateIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
+    { text: 'Certificate', link: '/CertificateLanding', icon: certificateIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Tax / Regulation', link: '/Tax', icon: taxIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
-    { text: 'Administeration', link: '/Administeration', icon: adminIcon, access: ['Admin',] },
+    { text: 'Administeration', link: '/AdminLanding', icon: adminIcon, access: ['Admin',] },
     { text: 'Blockchain Records', link: '/Blockchain', icon: blockchainIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
-    { text: 'Manufacturer', link: '/Manufacturer', icon: manufacturingIcon, access: ['Manufacture', 'Admin',] },
+    { text: 'ManufactureLanding', link: '/ManufactureLanding', icon: manufacturingIcon, access: ['Manufacture', 'Admin',] },
     { text: 'Statistics', link: '/Statistics', icon: barChartIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     // Add more items as needed
   ];
