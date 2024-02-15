@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HarvestLink/static/css/main.27f87a0c.css",
-    "main.js": "/HarvestLink/static/js/main.704af72a.js",
+    "main.css": "/HarvestLink/static/css/main.5258e6d3.css",
+    "main.js": "/HarvestLink/static/js/main.37bda82a.js",
     "static/js/787.d5fa4d18.chunk.js": "/HarvestLink/static/js/787.d5fa4d18.chunk.js",
     "static/media/LandPage_bg.jpg": "/HarvestLink/static/media/LandPage_bg.3ce4ebf6177391cee82e.jpg",
     "static/media/HarvestLink_Logo.png": "/HarvestLink/static/media/HarvestLink_Logo.6a71806ae1c44eb79216.png",
@@ -13,20 +13,25 @@
     "static/media/blockchain.png": "/HarvestLink/static/media/blockchain.886e8c36d3e4f8eefbb9.png",
     "static/media/route.png": "/HarvestLink/static/media/route.27f2ef2ca41fe587b610.png",
     "static/media/setting.png": "/HarvestLink/static/media/setting.d253e01d5104acb9826b.png",
+    "static/media/create.png": "/HarvestLink/static/media/create.c5db0a3ea3ead4e5c644.png",
     "static/media/farmer.png": "/HarvestLink/static/media/farmer.2c276cf11640b313b4d5.png",
     "static/media/certificate.png": "/HarvestLink/static/media/certificate.6168f1fd3d768863f86f.png",
+    "static/media/image.png": "/HarvestLink/static/media/image.711b2f6db4d7424bd4fb.png",
     "static/media/twitter.png": "/HarvestLink/static/media/twitter.a0edd153afbcdb7ffc3b.png",
+    "static/media/request.png": "/HarvestLink/static/media/request.18c6ac7044a7744c02c2.png",
+    "static/media/add.png": "/HarvestLink/static/media/add.5a446b5259872f4e1a3e.png",
     "static/media/tax.png": "/HarvestLink/static/media/tax.c2b217f75235439bbb01.png",
     "static/media/invoice.png": "/HarvestLink/static/media/invoice.14cf5197bc41a6303bc5.png",
+    "static/media/path-a-to-b.png": "/HarvestLink/static/media/path-a-to-b.754e4c84b613cf1a51aa.png",
     "static/media/facebook.png": "/HarvestLink/static/media/facebook.8d51a55626e9bf107f8f.png",
     "static/media/user.png": "/HarvestLink/static/media/user.33e7df0963941edbeb70.png",
     "index.html": "/HarvestLink/index.html",
-    "main.27f87a0c.css.map": "/HarvestLink/static/css/main.27f87a0c.css.map",
-    "main.704af72a.js.map": "/HarvestLink/static/js/main.704af72a.js.map",
+    "main.5258e6d3.css.map": "/HarvestLink/static/css/main.5258e6d3.css.map",
+    "main.37bda82a.js.map": "/HarvestLink/static/js/main.37bda82a.js.map",
     "787.d5fa4d18.chunk.js.map": "/HarvestLink/static/js/787.d5fa4d18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.27f87a0c.css",
-    "static/js/main.704af72a.js"
+    "static/css/main.5258e6d3.css",
+    "static/js/main.37bda82a.js"
   ]
 }
