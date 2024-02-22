@@ -13,18 +13,22 @@ import manufacturingIcon from '../assets/icons/manufacturing.png';
 import marketplaceIcon from '../assets/icons/marketplace.png';
 import routeIcon from '../assets/icons/route.png';
 import taxIcon from '../assets/icons/tax.png';
+// import GetUserType from "../components/Auth/User";
+import { GetUserType, GetLoginStatus } from "../components/Auth/User";
 
 function Homepage() {
+  
+  const userType = GetUserType();
 
-  const user = 'Admin'; //To be handled by backend developer; Tip fetch user type from backend
 
+   //To be handled by backend developer; Tip fetch userType type from backend
   const homepageItems = [
     { text: 'Inspection', link: '/InspectionLanding', icon: inspectorIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Invoice', link: '/Invoice', icon: invoiceIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Driver', link: '/DriverLanding', icon: driverIcon, access: ['Driver', 'Admin',] },
     { text: 'Routes', link: '/RouteLanding', icon: routeIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Farmer', link: '/FarmerLanding', icon: farmerIcon, access: ['Farmer', 'Admin',] },
-    { text: 'Marketplace', link: '/Marketplace', icon: marketplaceIcon, access: ['Farmer', 'Manufacture', 'Admin',] },
+    { text: 'Marketplace', link: '/MarketPlace', icon: marketplaceIcon, access: ['Farmer', 'Manufacture', 'Admin',] },
     { text: 'Certificate', link: '/CertificateLanding', icon: certificateIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Tax / Regulation', link: '/Tax', icon: taxIcon, access: ['Farmer', 'Manufacture', 'Driver', 'Admin',] },
     { text: 'Administeration', link: '/AdminLanding', icon: adminIcon, access: ['Admin',] },
@@ -34,7 +38,7 @@ function Homepage() {
     // Add more items as needed
   ];
 
-  const filteredItems = homepageItems.filter(item => item.access.includes(user));
+  const filteredItems = homepageItems.filter(item => item.access.includes(userType));
 
   return (
     <div className="text-white grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 min-h-screen p-10 ml-6">

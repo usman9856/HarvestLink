@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/HarvestLink_Logo.png';
-import user from '../../assets/icons/user.png';
+import user_img from '../../assets/icons/user.png';
 import more from '../../assets/icons/more.png'
 import adminIcon from '../../assets/icons/admin.png';
 import barChartIcon from '../../assets/icons/bar-chart.png';
@@ -18,24 +18,18 @@ import taxIcon from '../../assets/icons/tax.png';
 import settingIcon from '../../assets/icons/setting.png';
 import logoutIcon from '../../assets/icons/logout.png';
 import profile from '../../assets/icons/profile.png';
+import { GetUserType, GetLoginStatus } from "../Auth/User";
 
 function Nav_Bar() {
-
   //////////////////////////////BACKENDONLY////////////////////////////////
-
-
-  
-  
-  //handle signout for the user
   const handleSignOut = () => {
     // Implement your sign-out logic here
   };
 
-  const loggedIn = true; // Set to true if the user is logged in
-  const userInst = 'Admin'; //type of user accessing the application
-
-
-
+  const isLoggedIn = GetLoginStatus(); // Set to true if the user is logged in
+  const userType = GetUserType();
+  
+  // const { userType, isLoggedIn } = GetUserType();
 
 
   //////////////////////////////FRONTEND ONLY//////////////////////////////
@@ -58,14 +52,14 @@ function Nav_Bar() {
     // Add more items as needed
   ];
 
-  //Navigation to be shown if user not logged in
+  //Navigation to be shown if user_img not logged in
   const landingNav = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" }
   ];
 
-  //Navigation to show it user is logged in
+  //Navigation to show it user_img is logged in
   const userNav = [
     { label: "Home", path: "/" },
     { label: "Create", path: "/Create" },
@@ -90,7 +84,7 @@ function Nav_Bar() {
 
       {/* ////////////////////////////// LEFT SIDEBAR ////////////////////////////// */}
       <ul className="flex items-center space-x-4">
-      {loggedIn ? (  
+      {isLoggedIn ? (  
       <li className="relative w-10 h-10 m-1 object-contain">
           {/* More button */}
           <button className="" onClick={toggleSidebar}>
@@ -102,7 +96,7 @@ function Nav_Bar() {
               <ul className="space-y-4 mt-6">
                 {/* side bar filters by access and maps options accordingly */}
                 {sideBarItems
-                  .filter(item => item.access.includes(userInst))
+                  .filter(item => item.access.includes(userType))
                   .map((item, index) => (
                     <li key={index}>
                       <Link to={item.link} className="block py-2 px-2 hover:bg-gray-700">
@@ -118,7 +112,7 @@ function Nav_Bar() {
               <ul className="space-y-4 mt-6">
                 {/* Partial side bar when menu button is not clicked */}
                 {sideBarItems
-                  .filter(item => item.access.includes(userInst))
+                  .filter(item => item.access.includes(userType))
                   .map((item, index) => (
                     <li key={index} className="pl-2 py-2">
                       <Link to={item.link} className="block hover:bg-gray-700">
@@ -138,8 +132,8 @@ function Nav_Bar() {
 
       {/* ////////////////////////////// USER/NON-USER NAV ////////////////////////////// */}
       <ul className='flex items-center justify-between px-4 sm:px-8 lg:px-16'>
-        {/* Show nav according to user login status */}
-        {(loggedIn ? userNav : landingNav).map((item, index) => (
+        {/* Show nav according to user_img login status */}
+        {(isLoggedIn ? userNav : landingNav).map((item, index) => (
           <li key={index} className="text-lg">
             <Link to={item.path} className="link px-2 sm:px-4 lg:px-6 py-2">
               {item.label}
@@ -149,13 +143,13 @@ function Nav_Bar() {
       </ul>
 
       {/* ////////////////////////////// RIGHT SIDEBAR ////////////////////////////// */}
-      {/* // if user logged in then show left sidebar else show login or appointment button */}
-      {loggedIn ? (
+      {/* // if user_img logged in then show left sidebar else show login or appointment button */}
+      {isLoggedIn ? (
         // sidebar section
         <ul className='flex items-center justify-between '>
           <li>
             <button className="btn-ca w-8 h-8 object-contain mr-2 " onClick={toggleUserbar}>
-              <img src={user} alt="User Icon" />
+              <img src={user_img} alt="User Icon" />
             </button>
             {isUserbarOpen && (
               <aside className={`bg-gray-800 text-white w-72 absolute h-screen  px-10 border-2 top-[66px] right-[-2px] h-40 userBar_open`}>

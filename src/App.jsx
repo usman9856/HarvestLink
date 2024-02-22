@@ -32,10 +32,20 @@ import DeleteRole from './components/Admin/DeleteRole';
 import AddRole from './components/Admin/AddRole';
 import AddFormComponent from './components/Admin/AddRole';
 import Appointment from './components/Admin/Appointements';
+import MarketPlace from './components/MarketPlace/MarketPlace';
+import ProductPage from './components/MarketPlace/ProductPage';
+import Tax from './components/Taxes/Tax';
+import Stats from './components/Statistics/Statistics';
+import UserBlockChain from './components/BlockChain/BlockChain';
+import { GetUserType, GetLoginStatus } from "../src/components/Auth/User";
 
 
 function App() {
-  const loggedIn = true;  //To be handled by backend developer; Tip fetch user status from backend
+
+
+  const loggedIn = GetLoginStatus();  //To be handled by backend developer; Tip fetch user status from backend
+
+
 
   return (
 
@@ -84,6 +94,12 @@ function App() {
           <Route exact path="/ViewRole" element={<ViewRole/>} />
           <Route exact path="/AddRole" element={<AddRole/>} />
           <Route exact path="/Appointment" element={<Appointment/>} />
+          <Route exact path="/MarketPlace" element={<MarketPlace/>} />
+          <Route exact path="/ProductPage" element={<ProductPage/>} />
+          <Route exact path="/Tax" element={<Tax/>} />
+          <Route exact path="/Statistics" element={<Stats/>} />
+          <Route exact path="/User" element={<GetUserType/>} />
+          <Route exact path="/BlockChain" element={<UserBlockChain/>} />
         </Routes>
         <footer>
           <Footer />
